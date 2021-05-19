@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd">
+	<property name="test" value="true"/>
+	<subDataset name="ParameterFive" uuid="123e4567-e89b-12d3-a456-556642440000">
+		<parameter name="tableFive" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	</subDataset>
+	<subDataset name="ParameterSix" uuid="123e4567-e89b-12d3-a456-556642440001">
+		<parameter name="tableSix" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	</subDataset>
+	<group name="Parameter5">
+		<groupFooter>
+			<band height="16">
+				<printWhenExpression><![CDATA[$P{tableFiveShow} == 1]]></printWhenExpression>
+				<componentElement>
+					<reportElement key="table"/>
+					<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+						<datasetRun subDataset="ParameterFive" uuid="123e4567-e89b-12d3-a456-556642440002">
+							<dataSourceExpression>
+								<![CDATA[$P{tableFive}]]>
+							</dataSourceExpression>
+						</datasetRun>
+					</jr:table>
+				</componentElement>
+			</band>
+		</groupFooter>
+	</group>
+	<group name="Parameter6">
+		<groupFooter>
+			<band height="16">
+				<printWhenExpression><![CDATA[$P{tableSixShow} == 1]]></printWhenExpression>
+				<componentElement>
+					<reportElement key="table"/>
+					<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+						<datasetRun subDataset="ParameterSix" uuid="123e4567-e89b-12d3-a456-556642440003">
+							<dataSourceExpression>
+								<![CDATA[$P{tableSix}]]>
+							</dataSourceExpression>
+						</datasetRun>
+					</jr:table>
+				</componentElement>
+			</band>
+		</groupFooter>
+	</group>
+<subDataset name="ParameterFive_1" uuid="2fa3d33e-8daf-420b-9bfe-ac6e35b0fc14">
+		<parameter name="tableFive_1" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	</subDataset><group name="Parameter5_1">
+		<groupFooter>
+			<band height="16">
+				<printWhenExpression><![CDATA[$P{tableFiveShow} == 1]]></printWhenExpression>
+				<componentElement>
+					<reportElement key="table"/>
+					<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+						<datasetRun subDataset="ParameterFive_1" uuid="2d7a85fb-ce18-4695-97df-fb4f03cc0421">
+							<dataSourceExpression><![CDATA[$P{tableFive_1}]]></dataSourceExpression>
+						</datasetRun>
+					</jr:table>
+				</componentElement>
+			</band>
+		</groupFooter>
+	</group><subDataset name="ParameterFive_2" uuid="10d416fa-9f09-4776-9b48-ebc5ee4e893a">
+		<parameter name="tableFive_2" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	</subDataset><group name="Parameter5_2">
+		<groupFooter>
+			<band height="16">
+				<printWhenExpression><![CDATA[$P{tableFiveShow} == 1]]></printWhenExpression>
+				<componentElement>
+					<reportElement key="table"/>
+					<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+						<datasetRun subDataset="ParameterFive_2" uuid="911abb14-1683-4fbc-abba-9ce53996cd47">
+							<dataSourceExpression><![CDATA[$P{tableFive_2}]]></dataSourceExpression>
+						</datasetRun>
+					</jr:table>
+				</componentElement>
+			</band>
+		</groupFooter>
+	</group><subDataset name="ParameterFive_3" uuid="ed03ca8b-fa89-48e8-9398-814851c0c1f8">
+		<parameter name="tableFive_3" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	</subDataset><group name="Parameter5_3">
+		<groupFooter>
+			<band height="16">
+				<printWhenExpression><![CDATA[$P{tableFiveShow} == 1]]></printWhenExpression>
+				<componentElement>
+					<reportElement key="table"/>
+					<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+						<datasetRun subDataset="ParameterFive_3" uuid="2e20c466-5d63-419a-a269-68c85caa7b38">
+							<dataSourceExpression><![CDATA[$P{tableFive_3}]]></dataSourceExpression>
+						</datasetRun>
+					</jr:table>
+				</componentElement>
+			</band>
+		</groupFooter>
+	</group></jasperReport>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd">
+	<property name="test" value="true" />
+	<subDataset name="ParameterFive"
+		uuid="123e4567-e89b-12d3-a456-556642440000">
+		<parameter name="tableFive"
+			class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource" />
+	</subDataset>
+	<subDataset name="ParameterSix"
+		uuid="123e4567-e89b-12d3-a456-556642440001">
+		<parameter name="tableSix"
+			class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource" />
+	</subDataset>
+	<group name="Parameter5">
+		<groupFooter>
+			<band height="16">
+				<printWhenExpression><![CDATA[$P{tableFiveShow} == 1]]></printWhenExpression>
+				<componentElement>
+					<reportElement key="table" />
+					<jr:table
+						xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components"
+						xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+						<datasetRun subDataset="ParameterFive"
+							uuid="123e4567-e89b-12d3-a456-556642440002">
+							<dataSourceExpression>
+								<![CDATA[$P{tableFive}]]>
+							</dataSourceExpression>
+						</datasetRun>
+					</jr:table>
+				</componentElement>
+			</band>
+		</groupFooter>
+	</group>
+	<group name="Parameter6">
+		<groupFooter>
+			<band height="16">
+				<printWhenExpression><![CDATA[$P{tableSixShow} == 1]]></printWhenExpression>
+				<componentElement>
+					<reportElement key="table" />
+					<jr:table
+						xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components"
+						xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+						<datasetRun subDataset="ParameterSix"
+							uuid="123e4567-e89b-12d3-a456-556642440003">
+							<dataSourceExpression>
+								<![CDATA[$P{tableSix}]]>
+							</dataSourceExpression>
+						</datasetRun>
+					</jr:table>
+				</componentElement>
+			</band>
+		</groupFooter>
+	</group>
+</jasperReport>
